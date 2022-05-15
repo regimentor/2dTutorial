@@ -3,7 +3,8 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private float horizontalDirectionVelocity = 10f;
-    [SerializeField] private float jumpForce = 15f;
+    [SerializeField] private Vector2 movementVelocityVector;
+    [SerializeField] private float jumpForce = 10f;
     [SerializeField] private LayerMask jumpbleGround;
 
     private new Rigidbody2D rigidbody;
@@ -26,16 +27,22 @@ public class PlayerMovement : MonoBehaviour
         animator = GetComponent<Animator>();
     }
 
+    private void FixedUpdate()
+    {
+        rigidbody.velocity = movementVelocityVector;
+    }
+
+
     // Update is called once per frame
     void Update()
     {
         horizontalInputDirection = Input.GetAxis("Horizontal");
 
-        rigidbody.velocity = new Vector2(
+        movementVelocityVector = new Vector2(
             horizontalInputDirection * horizontalDirectionVelocity, rigidbody.velocity.y);
 
-        if (Input.GetButtonDown("Jump") && IsOnGround())
-            rigidbody.velocity = new Vector2(rigidbody.velocity.x, jumpForce);
+        if (Input.GetButton("Jump") && IsOnGround())
+            movementVelocityVector = new Vector2(rigidbody.velocity.x, jumpForce);
 
 
         UpdateAnimationState();
