@@ -54,14 +54,14 @@ public class PlayerMovement : MonoBehaviour
         switch (animationState)
         {
             case AnimationState.running:
+            case AnimationState.idle:
+            case AnimationState.jumping:
+            case AnimationState.falling:
                 if (horizontalInputDirection > 0f)
                     spriteRenderer.flipX = false;
                 else if (horizontalInputDirection < 0f)
                     spriteRenderer.flipX = true;
                 break;
-            case AnimationState.idle:
-            case AnimationState.jumping:
-            case AnimationState.falling:
             default:
                 return;
         }
