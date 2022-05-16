@@ -7002,6 +7002,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   start: {fileID: 1776286175}
   end: {fileID: 345770733}
+  speed: 5
+  direction: -1
 --- !u!61 &1705290193
 BoxCollider2D:
   m_ObjectHideFlags: 0
