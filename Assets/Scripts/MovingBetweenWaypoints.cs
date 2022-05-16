@@ -1,8 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class PlatformMoving : MonoBehaviour
+public class MovingBetweenWaypoints : MonoBehaviour
 {
 
     [SerializeField] GameObject start;
