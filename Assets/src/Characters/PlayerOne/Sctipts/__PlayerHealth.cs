@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class PlayerHealth : MonoBehaviour
+public class __PlayerHealth : MonoBehaviour
 {
 
     [SerializeField] int health = 3;
@@ -51,7 +51,7 @@ public class PlayerHealth : MonoBehaviour
     }
 
     /// <summary>
-    ///  Запускается последним кадром анимации die
+    ///  пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ die
     /// </summary>
     public void RestartLevel()
     {

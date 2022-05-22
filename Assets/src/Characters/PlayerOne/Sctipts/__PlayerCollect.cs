@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PlayerCollect : MonoBehaviour
+public class __PlayerCollect : MonoBehaviour
 {
 
     [SerializeField] private Text playerScoreUIText;

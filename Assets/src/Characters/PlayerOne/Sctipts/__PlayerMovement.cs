@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
+public class __PlayerMovement : MonoBehaviour
 {
     [SerializeField] private float horizontalDirectionVelocity = 10f;
     [SerializeField] private Vector2 movementVelocityVector;
